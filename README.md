@@ -1,3 +1,3 @@
 # BONELAB Unofficial Docs
 
-Community-managed knowledge base for creating BONELAB mods.
+Community-managed knowledge base for creating BONELAB SDK mods.
