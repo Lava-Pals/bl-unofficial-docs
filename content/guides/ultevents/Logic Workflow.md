@@ -8,5 +8,7 @@ This is a short and brief explanation of how your UltEvent logic is supposed to 
 			 -  `Event 1` (Contains an UltEvent Holder that gets invoked when something happens. e.g OnParent)
 		-  `Internal` (Internal logic that you don't need to access after it's done)
 			- Logic Logic Logic
+		- `Var` (Contains variables you need to store. e.g position)
+			- Position (The transform position could be 0,5,0)
 
 ##### See `[[General Tricks]]` for more info about a better workflow

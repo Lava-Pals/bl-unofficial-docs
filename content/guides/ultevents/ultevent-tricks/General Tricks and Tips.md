@@ -11,3 +11,8 @@ To copy/paste a singular event from a list, you need to click the 3 line bar at 
 ![[3LineBar.png]]
 
 Then, you can do your action. (The usual keybinds work - CTRL + C/V. If for some reason they don't, right click it.)
+
+## Invoking static methods
+One big advantage that UltEvents have is invoking static methods. You can search for static classes like this:
+
+![[StaticMethodInvoke.gif]]
