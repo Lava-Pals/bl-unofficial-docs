@@ -10,10 +10,10 @@ Make sure you've read [[Logic Workflow]] before continuing.
 After you've made a prefab, set it up like this:
 - `Logic`
 	- `Funcs` (Make sure to add holders on each object under this)
-	-  `Increase`
-	-  `Decrease`
+		-  `Increase`
+		-  `Decrease`
 	- `Var`
-	- `Counter`
+		- `Counter`
 
 First off - the increase and decrease
 Storing ints is relatively simple - we just store them on an object's position and later on round them (..because of float precision)
