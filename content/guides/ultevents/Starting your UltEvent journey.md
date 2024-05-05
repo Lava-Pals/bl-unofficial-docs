@@ -1,4 +1,3 @@
-
 UltEvents are the most powerful way (...and the only way) to make functional and advanced items. What are they?
 Before we start, make sure to take some time and read their docs, which can be found [here](https://kybernetik.com.au/ultevents/).
 
