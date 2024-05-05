@@ -16,6 +16,7 @@ After you've made a prefab, set it up like this:
 		- `Counter`
 
 First off - the increase and decrease
+
 Storing ints is relatively simple - we just store them on an object's position and later on round them (..because of float precision)
 
 To change the value, we wanna use [``Transform.Translate``](https://docs.unity3d.com/ScriptReference/Transform.Translate.html) to increase and decrease the local position of the object. Now we choose the axis we wanna store the number on, it doesn't matter which one - but has to stay consistent. We're going to use the x axis for now. If you want to set the counter to a number, and not just increase or decrease - you can set the local position ([``Transform.localPosition``](https://docs.unity3d.com/ScriptReference/Transform-localPosition.html))
