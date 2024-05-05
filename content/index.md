@@ -1,5 +1,5 @@
 ---
-title: Welcome to Unofficial Docs!
+title: Welcome to the BONELAB Unofficial Docs!
 ---
 
 Welcome to BONELAB Unofficial Docs site! This is a community ran project that contains information and guides to assist you with creating SDK mods.
