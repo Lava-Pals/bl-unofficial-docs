@@ -8,10 +8,11 @@ First up, make a prefab. You're going to be wanting to do this for all your logi
 
 Make sure you've read [[Logic Workflow]] before continuing. 
 After you've made a prefab, set it up like this:
-- `Funcs` (Make sure to add holders on each object under this)
+- `Logic`
+	- `Funcs` (Make sure to add holders on each object under this)
 	-  `Increase`
 	-  `Decrease`
-- `Var`
+	- `Var`
 	- `Counter`
 
 First off - the increase and decrease
