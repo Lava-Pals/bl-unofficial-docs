@@ -2,9 +2,9 @@
 > [!NOTE] Work in progress!
 > This page is missing Prefabs.
 
-Making a counter in UltEvents is a bit.. odd - like everything UltEvents.
+Making a counter in UltEvents is a bit... odd - like everything UltEvents.
 
-First up, make a prefab. You're going to be wanting to do this for all your logic bits, so I recommend making a folder that contains all of the UltEvents shenanigan - you can reuse them later on.
+First up, make a prefab. You're going to be wanting to do this for all your logic bits, so I recommend making a folder that contains all of the UltEvents shenanigans - you can reuse them later on.
 
 Make sure you've read [[Logic Workflow]] before continuing. 
 After you've made a prefab, set it up like this:
@@ -15,11 +15,12 @@ After you've made a prefab, set it up like this:
 	- `Var`
 		- `Counter`
 
-First off - the increase and decrease
+First off - the increase and decrease.
 
-Storing ints is relatively simple - we just store them on an object's position and later on round them (..because of float precision)
+Storing ints is relatively simple - we just store them on an object's position and later on round them (...because of float precision)
 
 To change the value, we wanna use [``Transform.Translate``](https://docs.unity3d.com/ScriptReference/Transform.Translate.html) to increase and decrease the local position of the object. Now we choose the axis we wanna store the number on, it doesn't matter which one - but has to stay consistent. We're going to use the x axis for now. If you want to set the counter to a number, and not just increase or decrease - you can set the local position ([``Transform.localPosition``](https://docs.unity3d.com/ScriptReference/Transform-localPosition.html))
+
 Here's an example for increasing the counter:
 
 ![[IncreasingTheCounter.png]]

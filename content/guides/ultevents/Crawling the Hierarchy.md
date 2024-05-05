@@ -1,5 +1,5 @@
 ---
-title: Traversing the Hierarchy with Transform.Find
+title: Crawling the Hierarchy with Transform.Find
 ---
 #wip
 
@@ -10,15 +10,15 @@ This guide covers how to use [`Transform.Find`](https://docs.unity3d.com/ScriptR
 
 This can be very useful for [[Parenting Things to the Player Rig]], as well as for other scenarios that require references to GameObjects inaccessible out of the editor.
 
-## Traversing the Ancestry
+## Crawling up the Ancestry Tree
 
-You can use the `../` syntax to traverse to the parent of an object. This can be very useful for getting references to GameObjects that you can't access in editor.
+You can use the `../` syntax to traverse to the parent of an object.
 
 The below gif showcases using this to parent an object (`ParentToFloop`) to another one that exists inside of the parent (`Floop`):
 
 ![[TransformFindParent.gif]]
 
-## Traversing from the Scene Root
+## Crawling Down from the Scene Root
 
 Similarly, appending `/` to the start of a path will base your path on the *root of the scene*.
 
