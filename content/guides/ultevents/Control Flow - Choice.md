@@ -14,6 +14,7 @@ Open up the method menu and locate Object.name on your GameObject.
 
 You know have the name of the object. You can now add another event, and find [`object.Equals`](https://learn.microsoft.com/en-us/dotnet/api/system.object.equals?view=net-8.0)
 -  Can be found here: `Anything > Base Types > object > bool Equals (object objA, object objB)`
+
 For the first object, we leave it as is - the return value (that points to the name).
 For the second object, we want to set it as a string using the [[Debugger]]. You can now go back to your normal inspector and set the string that can you want to compare the name to.
 Now we make a new GameObject and add the [LifeCycleEvents](https://kybernetik.com.au/ultevents/api/UltEvents/LifeCycleEvents/) script to it. Let's call it `ifTrue`. We want to set it as a target in a new event and set the method to [`GameObject.SetActive`](https://docs.unity3d.com/ScriptReference/GameObject.SetActive.html) and use the return value from the Equals method we used.
