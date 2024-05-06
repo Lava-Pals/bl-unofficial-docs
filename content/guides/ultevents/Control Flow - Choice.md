@@ -11,6 +11,7 @@ Time for an example. As always, make a new prefab and follow along. For the sake
 Add your UltEvent Holder, and add a new event to it.
 Open up the method menu and locate Object.name on your GameObject. 
 - Can be found here: `GameObject > Base Types > UnityEngine.Object > string name` - We want to get it.
+
 You know have the name of the object. You can now add another event, and find [`object.Equals`](https://learn.microsoft.com/en-us/dotnet/api/system.object.equals?view=net-8.0)
 -  Can be found here: `Anything > Base Types > object > bool Equals (object objA, object objB)`
 For the first object, we leave it as is - the return value (that points to the name).
