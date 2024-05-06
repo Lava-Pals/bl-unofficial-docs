@@ -11,14 +11,14 @@ In the last two years, we've managed to find a lot of UltEvents hacks, tricks an
 
 ## Time for the basics!
 
-If you really wanna understand, open unity - and make a new prefab. Add an UltEvent Holder script to an object; copy the guide 1 to 1, it'll help you understand the workflow.
+If you really want to understand, open unity - and make a new prefab. Add an UltEvent Holder script to an object; copy the guide 1 to 1, it'll help you understand the workflow.
 
 
 
 ![[EventSetup.png]]
 The image above is a good reference when talking about events. For example we can say "set the method to x, and the target to object y".
 
-Say... you wanna change the active state of an object. Click the plus icon to add an event to the list. Drag the desired object and set it as your target, then open the method menu, and locate ``void SetActive``. You can modify the bool value to your needs.
+Say... you want to change the active state of an object. Click the plus icon to add an event to the list. Drag the desired object and set it as your target, then open the method menu, and locate ``void SetActive``. You can modify the bool value to your needs.
 
 As you can see, you need to know your way around unity's API to know what you're doing.
 

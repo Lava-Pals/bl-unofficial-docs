@@ -19,13 +19,13 @@ First off - the increase and decrease.
 
 Storing ints is relatively simple - we just store them on an object's position and later on round them (...because of float precision)
 
-To change the value, we wanna use [``Transform.Translate``](https://docs.unity3d.com/ScriptReference/Transform.Translate.html) to increase and decrease the local position of the object. Now we choose the axis we wanna store the number on, it doesn't matter which one - but has to stay consistent. We're going to use the x axis for now. If you want to set the counter to a number, and not just increase or decrease - you can set the local position ([``Transform.localPosition``](https://docs.unity3d.com/ScriptReference/Transform-localPosition.html))
+To change the value, we want to use [``Transform.Translate``](https://docs.unity3d.com/ScriptReference/Transform.Translate.html) to increase and decrease the local position of the object. Now we choose the axis we want to store the number on, it doesn't matter which one - but has to stay consistent. We're going to use the x axis for now. If you want to set the counter to a number, and not just increase or decrease - you can set the local position ([``Transform.localPosition``](https://docs.unity3d.com/ScriptReference/Transform-localPosition.html))
 
 Here's an example for increasing the counter:
 
 ![[IncreasingTheCounter.png]]
 
-You'd wanna do the same for decrease but replace the `1` with a `-1`.
+You'd want to do the same for decrease but replace the `1` with a `-1`.
 
 Now for getting the value - the fastest way would be getting the dot product of the local position and the vector `1,0,0` ([`Vector3.Dot`](https://docs.unity3d.com/ScriptReference/Vector3.Dot.html)).
 See [[General Tricks and Tips]] for invoking static methods.
