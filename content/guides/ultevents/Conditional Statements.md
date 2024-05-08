@@ -6,7 +6,7 @@ We utilize the [LifeCycleEvents](https://kybernetik.com.au/ultevents/api/UltEven
 
 When the GameObject is enabled, that means the value is `true`. When it's disabled, that means the value is `false`.
 
-Time for an example. As always, make a new prefab and follow along. For the sake of the example, we're just going to compare a name of an GameObject to antoher string. Make sure to briefly go over [[Debugger]] before proceeding.
+Time for an example. As always, make a new prefab and follow along. For the sake of the example, we're just going to compare a name of an GameObject to another string. Make sure to briefly go over [[Debugger]] before proceeding.
 
 Add your UltEvent Holder, and add a new event to it.
 Open up the method menu and locate Object.name on your GameObject. 
