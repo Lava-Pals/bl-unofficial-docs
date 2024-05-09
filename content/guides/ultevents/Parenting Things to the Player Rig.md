@@ -21,7 +21,7 @@ This is *very important* to take into account with your logic, as if you're plan
 > [!NOTE] Why is the rig parented differently on custom maps?
 > SLZ drops the rig into their own scenes manually so that they can include references to it in their own scripts. However for custom maps, the rig is not included in the SDK and so the game spawns it automatically.
 
-### Section Take-Aways:
+### Section Take-Aways
 
 - The rig manager is called `[RigManager (Blank)]` and always parented under root on base-game maps.
 - For custom maps, the rig manager has the same name but is parented under the `Default Player Rig [0]` GameObject.
