@@ -1,8 +1,6 @@
-#wip
-
 This guide will teach you how to parent things to the Player Rig (that's your character!). This can be super useful for reading rotations of limbs, invoking methods on the player rig using [`GameObject.SendMessageUpwards`](https://docs.unity3d.com/ScriptReference/GameObject.SendMessage.html) and more.
 
-### What's the Player Rig
+### What *is* the Player Rig?
 
 The player rig encapsulates all systems that make up your character in Bonelab. That's the physics, avatar, animation, controller tracking data and more.
 
