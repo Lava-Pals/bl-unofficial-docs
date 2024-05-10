@@ -1,10 +1,6 @@
 ---
 title: Crawling the Hierarchy with Transform.Find
 ---
-#wip
-
-> [!NOTE] Work in progress!
-> This page is missing Prefabs.
 
 This guide covers how to use [`Transform.Find`](https://docs.unity3d.com/ScriptReference/Transform.Find.html) to find objects in the scene - including info on how to abuse its undocumented behaviour.
 
@@ -25,3 +21,4 @@ Similarly, appending `/` to the start of a path will base your path on the *root
 This example showcases using `/` at the start to search the root, look inside of the `Floop` GameObject, then finally parent to `Bar`:
 
 ![[TransformFindRoot.gif]]
+
