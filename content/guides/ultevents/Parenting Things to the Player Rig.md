@@ -44,7 +44,7 @@ Add the logic as scene in the media below:
 
 ## Parenting to the Rig - Any Level
 
-Now we're going to need to use [[conditional statements]] to parent to the rig, regardless of if it's a custom map or not.
+Next, we're going to need to use [[conditional statements]] to parent to the rig, regardless of if it's a custom map or not.
 
 As noted from previous steps, we know that:
 
