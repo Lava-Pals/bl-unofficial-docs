@@ -20,7 +20,7 @@ To solve this, we literally just tell it "do it anyways!". We do this by using t
 ![[TheRed.gif]]
 
 ## Using GetComponent variants
-Using other types of `GetComponent` (e.g`GetComponentInChildren`, `GetComponentInParent` etc etc..) is a bit different since you have to get a `Type`. It's fairly straight forward, you just need to run `System.Type.GetType(string)`. It should look something like this:
+Using other types of `GetComponent` (e.g [`GetComponentInChildren`](https://docs.unity3d.com/ScriptReference/GameObject.GetComponentInChildren.html), [`GetComponentInParent`](https://docs.unity3d.com/ScriptReference/GameObject.GetComponentInParent.html) etc etc..) is a bit different since you have to get a `Type`. It's fairly straight forward, you just need to run `System.Type.GetType(string)`. It should look something like this:
 
 ![[GetComponentVariant.png]]
 
