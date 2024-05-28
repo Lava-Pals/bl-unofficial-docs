@@ -84,3 +84,5 @@ Note that setting it to None will use more video memory on the device.
 ```
 
 This should fix the issues demonstrated in the above video. There's more that I can explain about this wonderful tool, and by extension, lighting, at a later point. This is a good stopping point for now, and should cover everything to my knowledge.
+
+If you want to contact me with any questions, reach out to me on Discord (@phoondos)
