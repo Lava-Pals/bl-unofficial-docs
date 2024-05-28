@@ -1,7 +1,3 @@
-#wip 
-> [!NOTE] Work in progress!
-> This page is missing Prefabs.
-
 Making a counter in UltEvents is a bit... odd - like everything UltEvents.
 
 First up, make a prefab. You're going to be wanting to do this for all your logic bits, so I recommend making a folder that contains all of the UltEvents shenanigans - you can reuse them later on.
