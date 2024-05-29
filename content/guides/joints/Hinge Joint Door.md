@@ -1,7 +1,3 @@
----
-title: Hinge Joint Door
----
-
 ### This is a simple guide for using joints to create a door!
 
 ![[OpeningDoor.gif]]
