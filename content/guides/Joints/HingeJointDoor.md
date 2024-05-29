@@ -6,7 +6,6 @@ title: Hinge Joint Door
 
 ![[OpeningDoor.gif]]
 
-
 ## Creating a prefab
 
 Make a prefab for the door, inside, add a GameObject called JointDoor, this will be used for the door itself. 
@@ -32,9 +31,13 @@ You can just leave this component alone.
 
 - Set some of these numbers to 0 or 1, using the "Edit Angular Limits" view to see the rotation. It's important you set this correctly.
 
-- At its current settings, the door has no rotation limit; if you want it to stop moving at a specific rotation, check the "Use Limits" toggle. Under "limits," you can adjust it to your desire. Use "Edit Angular Limits" to view the object's limit.
+- At its current settings, the door has no rotation limit; if you want it to stop moving at a specific rotation, check the "Use Limits" toggle. Under "limits," you can adjust it however you want. Use "Edit Angular Limits" to view the object's limit.
 
 - If you want your door to be breakable, lower "Break Force" and "Break Torque," it will likely be already set to infinity, meaning your door is unbreakable.
+
+#### Here's the settings I use most of the time:
+
+![[HingeJointScreenshot.png]]
 
 #### You can play around with the rest of these settings. Although usually just changing the settings I listed works fine though.
 
