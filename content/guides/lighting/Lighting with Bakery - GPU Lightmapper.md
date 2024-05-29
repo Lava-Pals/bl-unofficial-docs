@@ -4,7 +4,7 @@ This guide will show you how to use one of the best lightmappers available for U
 
 When creating a new scene, you'll almost always have a Directional Light, Main Camera, and Global Volume. 
 
-![[Pasted image 20240528173314.png]]
+![[Hierarchy.png]]
 
 If you're porting levels from other games, then you're okay with deleting everything except for the Global Volume. If not, then just delete the Main Camera. 
 
@@ -12,24 +12,24 @@ Bakery needs you to use it's scripts for it to actually do anything with lightin
 
 If you're making a wholly custom map and are not porting any lights from anywhere, you can just use the Bakery dropdown at the top of the screen to spawn in the lights with the scripts already on them, with their own gizmos.
 
-![[Pasted image 20240528173505.png]]
+![[BakeryDropdown.png]]
 
 If you are porting lights from other scenes, then just add the scripts onto the pre-existing light objects. **ENSURE THAT THE ORIGINAL UNITY LIGHT COMPONENT IS DISABLED**. When you add these scripts to existing lights, it'll give you two options in the Bakery script:
 
-![[Pasted image 20240528173621.png]]
+![[BakeryMatch.png]]
 
 The top button will change the Bakery script's settings to match the Unity Light's settings. This is what you'll want to use 90% of the time. When you make changes to one component or the other, these two buttons will come up every time. If you want to match the Unity Light's settings to the ones in Bakery's script, then press the bottom button.
 
 A quick aside, you may notice that there isn't a Bakery Spot Light script. That's intentional. The Bakery Point Light script has settings that let you change it to behave exactly like a Spot Light does.
 
-![[Pasted image 20240528173804.png]]
+![[BakeryMasks.png]]
 
 Once all the lights in your scene have the associated Bakery scripts and are matched up, again, **ENSURE THAT THE ORIGINAL UNITY LIGHT COMPONENT IS DISABLED.** If it isn't, then there will be double brightness which is obviously not wanted in any way, shape, or form.
 
 Bakery has a plethora of settings to ensure you can light your scene the way you want it. It may seem daunting at first, but I have a baseline of settings that I always use that hasn't failed me (yet). You can open the Bakery tab by using the dropdown and pressing Render lightmap.
 
-![[Pasted image 20240528174115.png]]
-![[Pasted image 20240528174128.png]]
+![[BakerySettings1.png]]
+![[BakerySettings2.png]]
 
 I use these settings with every single scene I've ever made. The only things I change  are the Bounces, Samples, and Texels per unit. 
 
@@ -47,7 +47,7 @@ After choosing the texels per unit you want and previewing it if you choose to d
 
 Once you're done with baking, you should have a decent looking bake. You're not out of the woods yet, however. Baked lighting only bakes lighting onto static objects. The player, and anything the player spawns, obviously won't be static. To combat this, Unity has what are called Light Probes. 
 
-![[Pasted image 20240528175012.png]]
+![[LightProbes.png]]
 
 They're little spheres that can be arranged anywhere in the scene that light gets baked onto from the meshes that already have lighting baked into them. The light that gets baked into these probes are projected onto moving objects to give the illusion that the objects are being lit dynamically as they move through areas with light probes in them. They're invaluable, and paramount to making anything moving look good when lighting is baked.
 
@@ -55,7 +55,7 @@ I use a tool called Magic Light Probes to place these automatically in my scene,
 
 After light probes leaves one last thing that's very important - Reflection Probes. These are easier to deal with as they're basically just a movable Box Collider. 
 
-![[Pasted image 20240528175226.png]]
+![[ReflectionProbes.png]]
 
 When using Reflection Probes, ensure that Box Projection is on when the Probe is meant to be used in an indoor space. This will make the look of the reflection on reflective objects correct itself based on your position in the probe. The only other important feature is Importance. You can change the influence a probe has on it's surroundings by changing this number. This way, you can have overlapping probes with varying importances, so there's a fallback probe with the lowest importance if you're not in an area with a higher importance probe.
 
@@ -63,11 +63,11 @@ Ensure that there are Reflection Probes everywhere in your scene that needs them
 
 After you've set up your Light Probes and Reflection Probes, there are buttons in the Bakery tab to bake them individually. Or, you can bake Light Probes along with the whole scene by pressing the Render button. However, Reflection Probes are always baked separately. When all this is baked, you should be completely done with baking lights for your scene, and things should look great.
 
-![[Pasted image 20240528175845.png]]
+![[GoodBake.png]]
 
 When exporting your scene with this lighting, there may be more things you have to do to make your map look good on all platforms. Lightmap compression is a big thing that you might have to deal with when looking at exporting for Quest.
 
-![[com.StressLevelZero.BONELAB-20230606-073036.mp4]]
+![[BadLook.mp4]]
 
 This video demonstrates what happens when you leave lightmap compression to it's default for Android platforms.
 
