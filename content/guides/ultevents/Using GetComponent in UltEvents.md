@@ -24,4 +24,4 @@ Using other types of `GetComponent` (e.g [`GetComponentInChildren`](https://docs
 
 ![[GetComponentVariant.png]]
 
-That's all for now! 
+That's all for now!
