@@ -1,3 +1,5 @@
+> [!CAUTION] This guide has not been updated for patch 4 and may be outdated. 
+
 Make sure you have the [`BoneLab Internal Pallet`](https://cdn.discordapp.com/attachments/1029149396056686602/1192579758903545897/BONELAB_Internal_Pallet.unitypackage?ex=66579d73&is=66564bf3&hm=46fe3caf382d52d955cdbc82044bc59a5dc494305217924ecf88548df081128e&) installed for this guide.
 ## Basic Setup
 First, add a SpawnableCratePlacer with the Clipboard Lore crate. add the LoreClipboardProxy script, then simply fill it out! In the SpawnableCratePlacer script, add the OnPlaceEvent and call the `LoreClipboardProxy.Spawn()` method. And that's it, your clipboard should work in-game now!

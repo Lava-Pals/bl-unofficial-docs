@@ -1,3 +1,5 @@
+> [!CAUTION] This guide has not been updated for patch 4 and may be outdated. 
+
 ## This is a simple guide for using joints to create a door!
 
 ![[OpeningDoor.gif]]
