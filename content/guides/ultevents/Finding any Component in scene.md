@@ -72,7 +72,7 @@ This is unfortunately where our editor testability ends. Select `SLZ.Marrow.Util
 
 ![[Pasted image 20240707191349.png]]
 
-In this case we have a component, so **make sure you select the overload that takes in a Component!
+In this case we have a component, so **make sure you select the overload that takes in a Component!**
 
 ![[Pasted image 20240707191541.png]]
 
