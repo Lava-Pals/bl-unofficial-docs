@@ -86,7 +86,7 @@ Feed the return value from `FindObjectOfType` into `ObjectPath`. Since there's n
 
 The paths returned by `ObjectPath` look something like this:
 - `Spawnable [0]/Art/Main`
-- `ObjectPathTest/ [0]/Grips/BoxGrip`
+- `ObjectPathTest/[0]/Grips/BoxGrip`
 
 Or in our case with the Player Marker, it should look something like this in most of SLZ's scenes:
 - `//-----ENVIRONMENT/Player Marker`
