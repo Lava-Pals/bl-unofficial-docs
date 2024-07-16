@@ -18,7 +18,7 @@ That's this fella if you were wondering - the player spawn point.
 
 Start by making yourself a new `UltEventHolder`, searching `System.Type` into the static method type picker and clicking on the `GetType` override that takes 3 arguments:
 
-![[Pasted image 20240707143534.png]]
+![[GetType.png]]
 
 I went ahead and ticked `throwOnError` so that we get an error in the console if it doesn't work, and also ticked `ignoreCase` because we don't care about case sensitivity.
 
@@ -27,29 +27,29 @@ Now let's find out what the name of the type we need is. If you have ExtendedSDK
 > [!NOTE] Note
 > Not all ExtendedSDK scripts will be underneath your project's package cache. If you can't find the script, try switching the search filter to 'In Assets' or 'All.'
 
-![[Pasted image 20240707144407.png]]
+![[PlayerMarkerSearch.png]]
 
 Great! Click the PlayerMarker script and have a look at it in the inspector.
 
-![[Pasted image 20240707173858.png]]
+![[StealingFromScript.png]]
 
 We'll need to start by taking the **namespace** and **class name** from the code. Search for `namespace` in the code and copy the text afterwards. Then look for `public class` and steal the class name that follows, leaving out anything after the colon.
 
 Great! Now we can combine the namespace and class name together to get the full name of our class, like so:
 
-![[Pasted image 20240707181123.png]]
+![[StealingFromScript2.png]]
 
 If we feed that into the `typeName` field, and invoke the `UltEventHolder`, we'll get an error:
 
-![[Pasted image 20240707182730.png]]
-![[Pasted image 20240707182814.png]]
+![[GetTypeFilled.png]]
+![[GetTypeException.png]]
 
 That's because we also need to specify the assembly name that we got earlier (this is because it's incorrectly targeting the `UltEvent` assembly).
 
 To fix this, add a comma and type the assembly name like so:
 `SLZ.Marrow.SceneStreaming.PlayerMarker, SLZ.Marrow`
 
-![[Pasted image 20240707185608.png]]
+![[GetTypeFilledCorrectly.png]]
 
 Now if you invoke the UltEventHolder, you'll see that no errors appear in the console. Sweet!
 
@@ -57,24 +57,24 @@ Now if you invoke the UltEventHolder, you'll see that no errors appear in the co
 
 Add a new Action. Search `UnityEngine.Object` into the type picker and select `FindObjectOfType`. We can use our return value from the previous step, and with that we should be able to successfully find the first component in the scene (in this case our `PlayerMarker`!)
 
-![[Pasted image 20240707190226.png]]
+![[FindObjectOfType.png]]
 
 Make sure you have a `GameObject` with your component on it in the scene, or go ahead and make one if you don't. I went ahead and inserted a `PlayerMarker` into mine.
 
 If we use `UnityEngine.Debug.Log` to output to the console and invoke our `UltEvent` now, you should see that it successfully found the `PlayerMarker` in the scene!
 
-![[Pasted image 20240707190233.png]]
-![[Pasted image 20240707190257.png]]
+![[AddLogging.png]]
+![[SuccessfulLog.png]]
 
 ## Getting the Transform from our component with `ObjectPath`
 
 This is unfortunately where our editor testability ends. Select `SLZ.Marrow.Utilities.ObjectPathExtensions` from the static method type picker:
 
-![[Pasted image 20240707191349.png]]
+![[ObjectPathExtensionsSearch.png]]
 
 In this case we have a component, so **make sure you select the overload that takes in a Component!**
 
-![[Pasted image 20240707191541.png]]
+![[ObjectPathMethod.png]]
 
 This method is going to allow us to pass in any component, and give us a path to it separated out by slashes.
 
@@ -82,7 +82,7 @@ Feed the return value from `FindObjectOfType` into `ObjectPath`. Since there's n
 
 > [!info] See [[Using GetComponent in UltEvents#Using GetComponent with methods that don't take a generic Component (THE RED)]] for info on exploiting the debug menu for this purpose!  
 
-![[Pasted image 20240708234104.png]]
+![[ObjectPathWithTheRed.png]]
 
 The paths returned by `ObjectPath` look something like this:
 - `Spawnable [0]/Art/Main`
@@ -101,4 +101,4 @@ And after that, all we need to do is feed it into `Transform.Find`, parent to th
 
 The final logic:
 
-![[Pasted image 20240708234921.png]]
+![[FullLogic.png]]
