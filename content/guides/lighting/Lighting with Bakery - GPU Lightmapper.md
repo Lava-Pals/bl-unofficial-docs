@@ -1,6 +1,6 @@
-Lighting is one of the most important parts of creating a level for any videogame, more so for virtual reality games like BONELAB. 
+Lighting is one of the most important parts of creating a level for any videogame, more so for virtual reality games like Bonelab. 
 
-This guide will show you how to use one of the best light mappers available for Unity to enhance the look and feel of your BONELAB level. 
+This guide will show you how to use one of the best light mappers available for Unity to enhance the look and feel of your Bonelab level. 
 
 When creating a new scene, you'll almost always have a Directional Light, Main Camera, and Global Volume. 
 
@@ -33,7 +33,7 @@ Bakery has a plethora of settings to ensure you can light your scene the way you
 
 I use these settings with every single scene I've ever made. The only things I change  are the Bounces, Samples, and Texels per unit. 
 
-Before we get into these settings, I need to preface with this. My settings depend on the Directional Mode being set to Mono SH.  This is a specialized Directional Mode that, as stated in the screenshot, needs a special shader to be used on every single mesh in the map that will have light baked onto it. You can find shaders that work for Bakery and support MAS maps from SLZ URP in the [`#mod-resources`](https://discord.com/channels/563139253542846474/745573692687515709) channel on the BONELAB discord. If you don't want to use this Directional Mode, then you can pick Baked Normal Maps or Dominant Direction. **DON'T PICK NONE, IT'LL LOOK REALLY FLAT**.
+Before we get into these settings, I need to preface with this. My settings depend on the Directional Mode being set to Mono SH.  This is a specialized Directional Mode that, as stated in the screenshot, needs a special shader to be used on every single mesh in the map that will have light baked onto it. You can find shaders that work for Bakery and support MAS maps from SLZ URP in the [`#mod-resources`](https://discord.com/channels/563139253542846474/745573692687515709) channel on the Bonelab discord. If you don't want to use this Directional Mode, then you can pick Baked Normal Maps or Dominant Direction. **DON'T PICK NONE, IT'LL LOOK REALLY FLAT**.
 
 Now, back to the settings. The most important setting, arguably, is texels per unit. This is essentially a resolution setting, at it's simplest. The higher the texels, the higher quality the light bake, with the downside of the more lightmaps being created. The Bakery GPU Lightmapper Wiki has a neat guideline for how much texels you should be setting depending on the size of any given scene:
 

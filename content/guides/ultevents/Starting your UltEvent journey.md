@@ -1,7 +1,7 @@
 UltEvents are the most powerful way (...and the only way) to make functional and advanced items. What are they?
 Before we start, make sure to take some time and read their docs, which can be found [here](https://kybernetik.com.au/ultevents/).
 
-UltEvents is a custom Unity Package that has been created to supersede Unity's built-in Unity Events with a couple quality-of-life features. Their main use case originally is for high-level logic that keeps the code of different components decoupled - but in the BONELAB modding space we use it like a very dumbed down visual scripting system.
+UltEvents is a custom Unity Package that has been created to supersede Unity's built-in Unity Events with a couple quality-of-life features. Their main use case originally is for high-level logic that keeps the code of different components decoupled - but in the Bonelab modding space we use it like a very dumbed down visual scripting system.
 
 UltEvents are definitely not intended for how we as modders use them, not in the slightest - to put it simply, we are abusing the ever living shit out of them.
 

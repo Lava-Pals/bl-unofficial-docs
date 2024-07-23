@@ -1,4 +1,4 @@
-> [!info] This guide covers a lot of ground, so don't feel discouraged if it's too much. You're always free to ask for help over in the BONELAB Discord Server, or try out some other guides first while you get your footing. Best of luck!
+> [!info] This guide covers a lot of ground, so don't feel discouraged if it's too much. You're always free to ask for help over in the Bonelab Discord Server, or try out some other guides first while you get your footing. Best of luck!
 
 This guide will cover 3 very useful methods you can use in your logic:
 
