@@ -1,4 +1,4 @@
-> [!CAUTION] This guide has not been updated for patch 4 and may be outdated. 
+> [!CAUTION] This guide was written for Patch 3 and may contain outdated information. 
 
 ## This is a simple guide for using joints to create a door!
 
