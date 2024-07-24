@@ -39,6 +39,16 @@ Great! Now we can combine the namespace and class name together to get the full 
 
 ![[StealingFromScript2.png]]
 
+Sometimes we might need a class that's not part of our project such as the camera
+
+![[CantFindCamera.png]]
+
+In this case, classes, namespaces and assemblies can be found on the [Unity scripting reference](https://docs.unity3d.com/2021.3/Documentation/ScriptReference).
+
+Opening a page for any of the class we can find all the info we need.
+
+![[StealingFromDocs.png]]
+
 If we feed that into the `typeName` field, and invoke the `UltEventHolder`, we'll get an error:
 
 ![[GetTypeFilled.png]]
