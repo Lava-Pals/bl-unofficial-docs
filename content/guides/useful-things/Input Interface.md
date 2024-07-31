@@ -6,7 +6,7 @@
 
 A system that exposes the `BaseController` on the `RigManager` and letting you access inputs you normally can't.
 
-The system basically switches the ultevent call's target to the actual `BaseController` from the `RigManager` instead of a dummy one. 
+The system basically switches the UltEvent call's target to the actual `BaseController` from the `RigManager` instead of a dummy one. 
 ## Usage
 Reference your grip in the `Simple Grip Events`, located on the Simple Grip Events object.
 
