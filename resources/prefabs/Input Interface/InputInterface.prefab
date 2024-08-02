@@ -502,7 +502,6 @@ GameObject:
   m_Component:
   - component: {fileID: 211123900643519999}
   - component: {fileID: 6713834383040294997}
-  - component: {fileID: 5682269880497979075}
   m_Layer: 0
   m_Name: ButtonListener
   m_TagString: Untagged
@@ -543,42 +542,10 @@ MonoBehaviour:
     - _Target: {fileID: 6979345923789468406}
       _MethodName: GetThumbStick
       _PersistentArguments: []
-    - _Target: {fileID: 0}
-      _MethodName: UnityEngine.JsonUtility, UnityEngine.JSONSerializeModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null.FromJsonOverwrite
-      _PersistentArguments:
-      - _Type: 2
-        _Int: 0
-        _String: '{"hello":1.0}'
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 0}
-      - _Type: 13
-        _Int: 0
-        _String: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 5682269880497979075}
   _LateUpdateEvent:
     _PersistentCalls: []
   _FixedUpdateEvent:
     _PersistentCalls: []
---- !u!114 &5682269880497979075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6464129321290411024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eca6579a8c891284c88ed2a7ecf56212, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6784277117881728141
 GameObject:
   m_ObjectHideFlags: 0
