@@ -32,4 +32,5 @@ This example demonstrates how you can go from any component (e.g Sphere Collider
 
 ### See Also
 
-- [[Finding any Component in scene]] - combined with `Transform.Find`, you can search for components and latch onto their GameObjects or Transforms!`
+- [[Finding any Component in scene]] - combined with `Transform.Find`, you can search for components and latch onto their GameObjects or Transforms!
+- [[Crawling the Hierarchy]] for information on using `Transform.Find` in UltEvents.
