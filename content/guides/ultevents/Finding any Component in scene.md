@@ -79,9 +79,9 @@ If we use `UnityEngine.Debug.Log` to output to the console and invoke our `UltEv
 
 ![[AddLogging.png]]
 ![[SuccessfulLog.png]]
-## Getting the Transform from our component with `ObjectPath`
+## Going from Transform to Component
 
-This is unfortunately where our editor testability ends. Select `SLZ.Marrow.Utilities.ObjectPathExtensions` from the static method type picker:
+We can use [[ObjectPathExtensions|ObjectPathExtensions.ObjectPath]] to get the `Transform` that belongs to our component, and then use `Transform.SetParent` to parent underneath the player marker.
 
 ![[ObjectPathExtensionsSearch.png]]
 
@@ -89,29 +89,29 @@ In this case we have a component, so **make sure you select the overload that ta
 
 ![[ObjectPathMethod.png]]
 
-This method is allows us to pass in any component, and returns out a **path** to it separated out by slashes.
-
 Feed the return value from `FindObjectOfType` into `ObjectPath`. Since there's no way to cast `Object` to `Component` in UltEvents, you'll need the to use the Debug menu to do this.
 
 > [!info] See [[Using GetComponent in UltEvents#Using GetComponent with methods that don't take a generic Component (THE RED)]] for info on exploiting the debug menu for this purpose!  
 
 ![[ObjectPathWithTheRed.png]]
 
-The paths returned by `ObjectPath` look something like this:
-- `Spawnable [0]/Art/Main`
-- `ObjectPathTest/[0]/Grips/BoxGrip`
-
-Or in our case with the Player Marker, it should look something like this in most of SLZ's scenes:
+Or in our case with the Player Marker, the path we are given will look like this in most of SLZ's scenes:
 - `//-----ENVIRONMENT/Player Marker`
 
 This is perfect! Now that we have an exact path to the player marker, we can feed it into `Transform.Find` to convert our path into a Transform, then parent underneath it to get the location of the Player Marker.
 
-To tell `Transform.Find` to search under the **root of our scene**, we need to add `/` to the start of the path. This is very important!
+As described in the [[ObjectPathExtensions]] guide, we will use `string.Format` to add a `/` to the start of the path. This'll tell `Transform.Find` to look underneath the root of the scene, and is very important!
 
-We can achieve this by using the `string.Format` method. Feed the return value from ObjectPath into `string.Format`, and then type `/{0}`. The method is going to replace `{0}` with whatever we tell it to.
-
-Now that our path is correct, feeding it into `Transform.Find` will give us the Transform!
-
-The following example will show the final logic being used to locate a player marker in the scene, parent something underneath it, and then recenter:
+The following example will show the final logic being used to locate a player marker in the scene, parent something underneath it, and then re-center:
 
 ![[FullLogic.png]]
+
+In summary:
+
+1. Use [`GetType`](https://learn.microsoft.com/en-us/dotnet/api/system.type.gettype) to Retrieve the `PlayerMarker` type.
+2. Use the type to find the first `PlayerMarker` component in the scene.
+3. Use [[ObjectPathExtensions|ObjectPath]] to get the path of the `PlayerMarker` (example return value: `Gameplay/Player Marker`).
+4. Use [`string.Format`](https://learn.microsoft.com/en-us/dotnet/api/system.string.format) to add a `/` to the start of our path.
+5. Use [`Transform.Find`](https://docs.unity3d.com/ScriptReference/Transform.Find.html) to get our `Transform` from its path. Adding a `/` to the front means that we'll search under the root of the scene, instead of underneath the Transform we provide!
+6. Use [`SetParent`](https://docs.unity3d.com/ScriptReference/Transform.SetParent.html) to re-parent underneath the Player Marker.
+7. Use [`SetLocalPositionAndRotation`](https://docs.unity3d.com/ScriptReference/Transform.SetLocalPositionAndRotation.html) to re-center in the middle of the Player Marker.
