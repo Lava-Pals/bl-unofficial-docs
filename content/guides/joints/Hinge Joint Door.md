@@ -6,15 +6,15 @@
 
 ## Creating a prefab
 
-Make a prefab for the door, inside, add a GameObject called JointDoor, this will be used for the door itself. 
+Make a prefab for the door, inside, add a GameObject called JointDoor, this is used for the door itself. 
 
-If you don't have a frame or anything outside the door that isn't supposed to move, you can instead add the following components to the root of the prefab.
+If you don't have a frame or anything outside the door that isn't supposed to move, instead add the following components to the root of the prefab.
 
 Add an InteractableHost, Hinge Joint, and a Rigidbody to the JointDoor GameObject. (Or the root)
 
 ## The Rigidbody
 
-You can do whatever you want with this, as the setting vary depending on the type of door you're making.
+You can do whatever you want with this, as the setting varies depending on the type of door you're making.
 
 ## The InteractableHost
 
@@ -28,7 +28,7 @@ You can just leave this component alone.
 - The anchor is what the object will rotate around. You'll usually want to set this to the side of the door, assuming it is a similar model to the one in the GIF.
 - Set some of these numbers to 0 or 1, using the "Edit Angular Limits" view to see the rotation. It's important you set this correctly.
 - At its current settings, the door has no rotation limit; if you want it to stop moving at a specific rotation, check the "Use Limits" toggle. Under "limits," you can adjust it however you want. Use "Edit Angular Limits" to view the object's limit.
-- If you want your door to be breakable, lower "Break Force" and "Break Torque," it will likely be already set to infinity, meaning your door is unbreakable.
+- Lower `Break Force` or `Break Torque` to make your door destructible when positional or rotational force is applied. It's set to infinity by default.
 
 ### Here's the settings I use most of the time:
 
