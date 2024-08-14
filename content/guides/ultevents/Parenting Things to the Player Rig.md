@@ -4,7 +4,7 @@ This guide will teach you how to parent things to the Player Rig (that's your ch
 
 The player rig encapsulates all systems that make up your character in Bonelab. That's the physics, avatar, animation, controller tracking data and more.
 
-Throughout this guide there will be references to the `RigManager` - put simply this is the name of the player rig in the scene, as it holds the `RigManager` component that is responsible for itself and all other sub-rigs that make up your character.
+Throughout this guide there will be references to the `RigManager`. The rig manager is the container for what makes up your player's character in the game. It has a `RigManager` script on it.
 
 ## So, Where's the Rig?
 
