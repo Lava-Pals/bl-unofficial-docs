@@ -1,6 +1,6 @@
 `SLZ.Marrow.Utilities.ObjectPathExtensions, SLZ.Marrow.dll`
 
-`ObjectPathExtensions` is a powerful class due to its `ObjectPath` method. We can use it to generate paths to get the `GameObject/Transform` that any component belongs to using UltEvents.
+`ObjectPathExtensions` is a powerful class due to its `ObjectPath` method. We can use it to generate paths to get the `GameObject`/`Transform` that any component belongs to using UltEvents.
 
 ## Replacing the Dummy Script
 
