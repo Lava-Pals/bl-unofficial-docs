@@ -4,7 +4,7 @@ This guide will cover 3 very useful methods you can use in your logic:
 
 - `System.Type.GetType`
 - `UnityEngine.Object.FindObjectOfType`
-- `MarrowUtilities.ObjectPath`
+- `SLZ.Marrow.Utilities.ObjectPathExtensions`
 
 ## About FindObjectOfType
 
