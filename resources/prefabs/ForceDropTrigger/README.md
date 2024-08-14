@@ -1,1 +1,1 @@
-This Prefab demonstrates a trigger that sends `ForceDetatch` upwards on any colliders that enter it, causing anything with an `InteractableHost` to be dropped to the ground.
+This Prefab contains a trigger that sends a `ForceDetatch` message upwards to any collider that enters it, causing it to be dropped if it has an `InteractableHost` (as most grabbable things do).
