@@ -1,3 +1,7 @@
+---
+title: 2. Logic Workflow
+---
+
 This is a short and brief explanation of how your UltEvent logic is supposed to be setup for easier use/read.
 
 - `Logic` (Has all of your logic under it)

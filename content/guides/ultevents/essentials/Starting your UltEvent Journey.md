@@ -1,3 +1,7 @@
+---
+title: 1. Starting your UltEvent Journey
+---
+
 UltEvents are the most powerful way (...and the only way) to make functional and advanced items. What are they?
 Before we start, make sure to take some time and read their docs, which can be found [here](https://kybernetik.com.au/ultevents/).
 
@@ -22,4 +26,6 @@ Say... you want to change the active state of an object. Click the plus icon to 
 
 As you can see, you need to know your way around unity's API to know what you're doing.
 
-#### And that's the end of the introduction! Next up - more advanced logic. We're going to be making a counter.
+### Try Next
+
+- [[Conditional Statements]] - Learn how to run logic when conditions are met.

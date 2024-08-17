@@ -10,6 +10,7 @@ Then, we just use [`Object.Destroy(Object obj)`](https://docs.unity3d.com/Script
 This will get way more advanced in the following chapter.
 
 ## Using GetComponent with methods that don't take a generic Component (THE RED)
+
 If you try to use the returned Component from the GetComponent method you would see that you literally can't.
 
 ![[CantUseGetComponent.png]]
@@ -20,6 +21,7 @@ To solve this, we literally just tell it "do it anyways!". We do this by using t
 ![[TheRed.gif]]
 
 ## Using GetComponent variants
+
 Using other types of `GetComponent` (e.g [`GetComponentInChildren`](https://docs.unity3d.com/ScriptReference/GameObject.GetComponentInChildren.html), [`GetComponentInParent`](https://docs.unity3d.com/ScriptReference/GameObject.GetComponentInParent.html) etc etc..) is a bit different since you have to get a `Type`. It's fairly straight forward, you just need to run `System.Type.GetType(string)`. It should look something like this:
 
 ![[GetComponentVariant.png]]

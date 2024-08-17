@@ -1,8 +1,13 @@
+---
+title: 4. UltEvents Counter
+---
+
 Making a counter in UltEvents is a bit... odd - like everything UltEvents.
 
 First up, make a prefab. You're going to be wanting to do this for all your logic bits, so I recommend making a folder that contains all of the UltEvents shenanigans - you can reuse them later on.
 
-Make sure you've read [[Logic Workflow]] before continuing. 
+Make sure you've read [[Logic Workflow]] before continuing.
+
 After you've made a prefab, set it up like this:
 - `Logic`
 	- `Funcs` (Make sure to add holders on each object under this)
@@ -34,8 +39,6 @@ Currently, you just got the value - you can use that for a bunch of stuff. Here'
 ![[DisplayingCounter.png]]
 
 And that's about it! Now you should have a fully working counter! Do as you please :)
-
 ## Resources
 
-- [📂 Prefabs for this guide are available on the repository!](https://github.com/Lava-Pals/bl-unofficial-docs/tree/main/resources/prefabs/UltEvents%20Counter)
-	- [`SimpleCounter.prefab`](https://github.com/Lava-Pals/bl-unofficial-docs/blob/main/resources/prefabs/UltEvents%20Counter/SimpleCounter.prefab)
+[`SimpleCounter.prefab`](https://github.com/Lava-Pals/bl-unofficial-docs/blob/main/resources/prefabs/UltEvents%20Counter/SimpleCounter.prefab) - A prefab for a counter that can be increased and decreased.

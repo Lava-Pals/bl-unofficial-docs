@@ -1,3 +1,0 @@
----
-title: UltEvent Tricks
----

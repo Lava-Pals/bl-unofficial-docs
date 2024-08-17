@@ -1,4 +1,4 @@
-## Static invoke
+## Static Invoke
 
 Static invoking lets you invoke UltEvents right in the editor, even when not in play mode. Demonstrated below:
 

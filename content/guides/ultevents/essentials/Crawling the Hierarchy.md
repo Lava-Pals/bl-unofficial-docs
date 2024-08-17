@@ -1,5 +1,5 @@
 ---
-title: Crawling the Hierarchy with Transform.Find
+title: 5. Crawling the Hierarchy with Transform.Find
 ---
 
 This guide covers how to use [`Transform.Find`](https://docs.unity3d.com/ScriptReference/Transform.Find.html) to find objects in the scene - including info on how to abuse its undocumented behaviour.

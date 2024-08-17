@@ -1,3 +1,7 @@
+---
+title: 3. Conditional Statements
+---
+
 If (equal) statements are used a lot when it comes to making UltEvents logic (or well, any kind of logic).
 
 UltEvents don't have a way to do a choice statement within an event. What we do is compare the values we want (using [`object.Equals`](https://learn.microsoft.com/en-us/dotnet/api/system.object.equals?view=net-8.0). Explanation below), and use the returned boolean value and apply it onto another GameObject using [`GameObject.SetActive`](https://docs.unity3d.com/ScriptReference/GameObject.SetActive.html). 
