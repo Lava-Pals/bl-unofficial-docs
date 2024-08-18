@@ -2,9 +2,9 @@
 
 This guide will cover 3 very useful methods you can use in your logic:
 
-- `System.Type.GetType`
-- `UnityEngine.Object.FindObjectOfType`
-- `SLZ.Marrow.Utilities.ObjectPathExtensions`
+- [`System.Type.GetType`](https://learn.microsoft.com/en-us/dotnet/api/system.type.gettype?view=net-8.0)
+- [`UnityEngine.Object.FindObjectOfType`](https://docs.unity3d.com/ScriptReference/Object.FindObjectOfType.html) - used to filter for specific components.
+- `SLZ.Marrow.Utilities.ObjectPathExtensions` - used to generate a path in the hierarchy, which is covered specifically in the [[ObjectPathExtensions]] guide.
 
 ## About FindObjectOfType
 
@@ -69,19 +69,19 @@ Now invoke the UltEventHolder and you'll see that no errors appear in the consol
 
 Now that we have the type, we can filter through the scene for an object that matches it.
 
-Add a new action with `UnityEngine.Object` `FindObjectOfType`. We can use our return value from the previous step, and just like that it'll find the first component in the scene (in this case our `PlayerMarker`!)
+Add a new action with `UnityEngine.Object.FindObjectOfType`. We can use our return value from the previous step, and just like that, it'll find the first component in the scene (in this case our `PlayerMarker`!)
 
 ![[FindObjectOfType.png]]
 
-Make sure you have a `GameObject` with your component on it in the scene, or go ahead and make one if you don't. I went ahead and inserted a `PlayerMarker` into mine.
+Add a `GameObject` with your component on it into the scene so that we can test it in editor. I went ahead and inserted a `PlayerMarker` into mine.
 
-If we use `UnityEngine.Debug.Log` to output to the console and invoke our `UltEvent` now, you should see that it successfully found the `PlayerMarker` in the scene!
+If we use [`Debug.Log`](https://docs.unity3d.com/ScriptReference/Debug.Log.html) to output to the console and invoke our `UltEvent` now, you should see that it successfully found the `PlayerMarker` in the scene!
 
 ![[AddLogging.png]]
 ![[SuccessfulLog.png]]
 ## Going from Transform to Component
 
-We can use [[ObjectPathExtensions|ObjectPathExtensions.ObjectPath]] to get the `Transform` that belongs to our component, and then use `Transform.SetParent` to parent underneath the player marker.
+We can use [[ObjectPathExtensions|ObjectPathExtensions.ObjectPath]] to get the [`Transform`](https://docs.unity3d.com/ScriptReference/Transform.html) that belongs to our component, and then use [`Transform.SetParent`](https://docs.unity3d.com/ScriptReference/Transform.SetParent.html) to parent underneath the player marker.
 
 ![[ObjectPathExtensionsSearch.png]]
 
@@ -94,9 +94,6 @@ Feed the return value from `FindObjectOfType` into `ObjectPath`. Since there's n
 > [!info] See [[Using GetComponent in UltEvents#Using GetComponent with methods that don't take a generic Component (THE RED)]] for info on exploiting the debug menu for this purpose!  
 
 ![[ObjectPathWithTheRed.png]]
-
-Or in our case with the Player Marker, the path we are given will look like this in most of SLZ's scenes:
-- `//-----ENVIRONMENT/Player Marker`
 
 This is perfect! Now that we have an exact path to the player marker, we can feed it into `Transform.Find` to convert our path into a Transform, then parent underneath it to get the location of the Player Marker.
 
