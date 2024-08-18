@@ -52,7 +52,7 @@ Great! Putting the namespace in-front of the class name will give us **the full 
 > 
 > ![[StealingFromDocs.png]]
 
-If we feed the classes **full name** into the `typeName` field, and invoke the `UltEventHolder`, we'll get an error:
+If we feed the classes **full name** into the `typeName` field, and [[General Tricks and Tips#Static Invoke|invoke]] the `UltEventHolder`, we'll get an error:
 
 ![[GetTypeFilled.png]]
 ![[GetTypeException.png]]
