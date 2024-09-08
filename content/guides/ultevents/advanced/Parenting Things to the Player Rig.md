@@ -8,7 +8,7 @@ Throughout this guide there will be references to the `RigManager`. The rig mana
 
 ## So, Where's the Rig?
 
-If we want to parent things to the rig, we're first going to figure out where it is and what it's called. By opening up Bonelab and having a look at the scene with [UnityExplorer](https://github.com/sinai-dev/UnityExplorer/releases), we can see that the rig is located under the root of the scene and called `[RigManager (Blank)]`:
+If we want to parent things to the rig, we're first going to figure out where it is and what it's called. By opening up Bonelab and having a look at the scene with [UnityExplorer](https://github.com/sinai-dev/UnityExplorer/releases), we can see that the rig is located under the root of the scene and called `/RigManager(bonelab)`:
 
 ![[Rig Manager Under Root.png]]
 
@@ -23,7 +23,7 @@ This is *very important* to take into account with your logic, as if you're plan
 
 ### Section Take-Aways
 
-- The rig manager is called `[RigManager (Blank)]` and always parented under root on base-game maps.
+- The rig manager is called `/RigManager(bonelab)` and always parented under root on base-game maps.
 - For custom maps, the rig manager has the same name but is parented under the `Default Player Rig [0]` GameObject.
 - *Side-note:* When in a [Fusion](https://github.com/Lakatrazz/BONELAB-Fusion) lobby, the other player's rigs are named differently and inserted into the scene after the local one - so you don't need to worry about conflicts.
 
@@ -31,7 +31,7 @@ This is *very important* to take into account with your logic, as if you're plan
 
 Let's start with UltEvent logic for parenting to the rig in base game levels.
 
-Create a new GameObject, name it `ParentToRig` and add an `UltEventHolder` component. To test if our logic is working as expected in editor, you can drag the [`[RigManager (Blank)]`](https://github.com/Lava-Pals/bl-unofficial-docs/blob/main/resources/prefabs/%5BRigManager%20(Blank)%5D.fbx) prefab into your scene. Make sure it's directly underneath the root of the scene, and is named exactly as it should be!
+Create a new GameObject, name it `ParentToRig` and add an `UltEventHolder` component. To test if our logic is working as expected in editor, you can drag the [`/RigManager(bonelab)`](https://github.com/Lava-Pals/bl-unofficial-docs/blob/main/resources/prefabs/%5BRigManager%20(Blank)%5D.fbx) prefab into your scene. Make sure it's directly underneath the root of the scene, and is named exactly as it should be!
 
 Add the logic as scene in the media below:
 
@@ -39,7 +39,7 @@ Add the logic as scene in the media below:
 
 ### Action Explanation
 
-1. `Transform.Find /[RigManager (Blank)]` - This will give us a reference to the RigManager. The `/` at the start tells it to search from the root of the scene - you can swap out `ThingToParent` for any other GameObject and this will still work.
+1. `Transform.Find /RigManager(bonelab)` - This will give us a reference to the RigManager. The `/` at the start tells it to search from the root of the scene - you can swap out `ThingToParent` for any other GameObject and this will still work.
 2. `set_parent Return Value 0: Transform.Find(string n)` - We can use our new reference from the previous action to put the `ThingToParent` object underneath the player rig!
 
 ## Parenting to the Rig - Any Level
@@ -48,8 +48,8 @@ Next, we're going to need to use [[Conditional Statements]] to parent to the rig
 
 As noted from previous steps, we know that:
 
-- `/[RigManager (Blank)]` is the path we need to use to parent to the rig in base game levels.
-- `/Default Player Rig [0]/[RigManager (Blank)]` is the path we need to use to parent to the rig on custom maps.
+- `/RigManager(bonelab)` is the path we need to use to parent to the rig in base game levels.
+- `/Default Player Rig [0]/RigManager(bonelab)` is the path we need to use to parent to the rig on custom maps.
 
 Take your logic from the previous step and create a new GameObject underneath the rig called `ParentToRigIfCustomMap`. We want this to *only* be enabled when we detect that there's a custom map loaded, so make sure it's *disabled* by default.
 
@@ -63,7 +63,7 @@ However, if the rig isn't found underneath the root of the scene, you'll see tha
 
 ![[Any Map - Fail.gif]]
 
-However, as a result of our `Object.Equals` check on action 4, action 5 enables our `ParentToRigIfCustomMap` logic! This means that we can simply add logic that runs when `ParentToRigIfCustomMap` is enabled that'll search for `/Default Player Rig [0]/[RigManager (Blank)]`.
+However, as a result of our `Object.Equals` check on action 4, action 5 enables our `ParentToRigIfCustomMap` logic! This means that we can simply add logic that runs when `ParentToRigIfCustomMap` is enabled that'll search for `/Default Player Rig [0]/RigManager(bonelab)`.
 
 To do this, add a `LifeCycleEvents` component to `ParentToRigIfCustomMap`, and copy the below logic into the enable event:
 
@@ -72,7 +72,7 @@ To do this, add a `LifeCycleEvents` component to `ParentToRigIfCustomMap`, and c
 Now when the `ParentToRigIfCustomMap` GameObject is enabled, the following actions will run:
 
 1. `SetActive false` - We disable the GameObject again so that our logic will run again next time something enables the GameObject.
-2. `Find /Default Player Rig [0]/[RigManager (Blank)]` - This'll look for the rig manager in root (as denoted by the `/` at the start) and underneath the GameObject that contains it in custom maps.
+2. `Find /Default Player Rig [0]/RigManager(bonelab)` - This'll look for the rig manager in root (as denoted by the `/` at the start) and underneath the GameObject that contains it in custom maps.
 3. `set_parent Return Value 0: Transform.Find(string n)` - As before, we can use our new reference from the previous action to put the `ThingToParent` object underneath the player rig!
 
 ## Resources
@@ -81,4 +81,4 @@ Now when the `ParentToRigIfCustomMap` GameObject is enabled, the following actio
 	- [`ParentToRig.prefab`](https://github.com/Lava-Pals/bl-unofficial-docs/blob/3829e73b2635509c1c67ea2116ae4d9dddf18be5/resources/prefabs/Parenting%20Things%20To%20The%20Player%20Rig/ParentToRig.prefab) - Prefab that parents things to the RigManager, as seen in this guide.
 	- [`ParentToFeet.prefab`](https://github.com/Lava-Pals/bl-unofficial-docs/blob/3829e73b2635509c1c67ea2116ae4d9dddf18be5/resources/prefabs/Parenting%20Things%20To%20The%20Player%20Rig/ParentToFeet.prefab) - Prefab that parents things to the Locoball.
 
-- [`[RigManager (Blank)].fbx`](https://github.com/Lava-Pals/bl-unofficial-docs/blob/main/resources/prefabs/%5BRigManager%20(Blank)%5D.fbx) - An fbx version that contains the hierarchy for the rig manager. Contains no scripts, but still useful as reference.
+- [`/RigManager(bonelab).fbx`](https://github.com/Lava-Pals/bl-unofficial-docs/blob/main/resources/prefabs/%5BRigManager%20(Blank)%5D.fbx) - An fbx version that contains the hierarchy for the rig manager. Contains no scripts, but still useful as reference.
