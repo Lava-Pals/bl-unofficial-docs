@@ -2,6 +2,9 @@
 title: Welcome to the BONELAB Unofficial Docs!
 ---
 
+> [!INFO] We've moved!
+> This site has been superseded by the new [BONELAB Guide Index](https://lava-pals.github.io/bl-guide-index), and is not being updated. All information will remain here indefinitely so that people can continue to reference these pages. Come check out or new home though!
+
 Welcome to BONELAB Unofficial Docs site! This is a community ran project that contains information and guides to assist you with creating SDK mods.
 
 These docs will operate under the assumption that you have a Unity project setup with the [Marrow Extended SDK Maintained](https://github.com/notnotnotswipez/Marrow-ExtendedSDK-MAINTAINED) scripts.

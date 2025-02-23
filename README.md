@@ -1,6 +1,10 @@
 # BONELAB Unofficial Docs
 
-> 🚧 **Note:** These docs are still a heavy work-in-progress!
+> [!INFO] We've moved!
+> This repository has been superseded by the new [BONELAB Guide Index](https://lava-pals.github.io/bl-guide-index), and is not being updated. All information will remain here indefinitely to maintain old links. Come check out or new home though!
+
+<details>
+<summary>Old Details?</summary>
 
 This repository holds the source code for the [BONELAB Unofficial Docs](https://lava-pals.github.io/bl-unofficial-docs/), a community-managed knowledge base for creating SDK mods.
 
@@ -32,3 +36,5 @@ npx quartz build --serve
 This will start a local web server to run your Quartz on your computer. Open a web browser and visit http://localhost:8080/ to view it.
 
 For more information, see the [Quartz documentation](https://quartz.jzhao.xyz).
+
+</details>
