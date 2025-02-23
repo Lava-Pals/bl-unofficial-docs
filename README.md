@@ -2,7 +2,7 @@
 
 > [!NOTE]
 > **We've moved!**
-> This repository has been superseded by the new [BONELAB Guide Index](https://lava-pals.github.io/bl-guide-index), and is not being updated. All information will remain here indefinitely to maintain old links. Come check out or new home though!
+> We're now over at the [BONELAB Guide Index!](https://lava-pals.github.io/bl-guide-index) This repository isn't being updated. All information will remain here indefinitely to maintain old links. Come check out our new home though!
 
 <details>
 <summary>Old Details?</summary>

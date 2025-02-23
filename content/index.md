@@ -3,7 +3,7 @@ title: Welcome to the BONELAB Unofficial Docs!
 ---
 
 > [!INFO] We've moved!
-> This site has been superseded by the new [BONELAB Guide Index](https://lava-pals.github.io/bl-guide-index), and is not being updated. All information will remain here indefinitely so that people can continue to reference these pages. Come check out or new home though!
+> We're now over at the [BONELAB Guide Index!](https://lava-pals.github.io/bl-guide-index) This repository isn't being updated. All information will remain here indefinitely to maintain old links. Come check out our new home though!
 
 Welcome to BONELAB Unofficial Docs site! This is a community ran project that contains information and guides to assist you with creating SDK mods.
 
