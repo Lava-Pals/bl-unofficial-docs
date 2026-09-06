@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "👥 BONELAB Unofficial Docs (ARCHIVE)",
+    pageTitle: "BONELAB Unofficial Docs",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
