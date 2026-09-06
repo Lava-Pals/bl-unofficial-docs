@@ -220,7 +220,7 @@ export function renderPage(
           <span>
             Check out{" "}
             <a href="https://lava-pals.github.io/lava-brain" data-router-ignore>
-              Lava Brains
+              Lava Brain
             </a>
             .
           </span>
