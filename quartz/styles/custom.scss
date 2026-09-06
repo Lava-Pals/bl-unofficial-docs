@@ -1,3 +1,51 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+.archive-banner {
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #9a513c;
+  background: linear-gradient(110deg, #2c2028, #633429, #2c2028);
+  color: #fff4eb;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.6;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: linear-gradient(to right, white 1px, transparent 1px),
+      linear-gradient(to bottom, white 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: center;
+    opacity: 0.15;
+    mix-blend-mode: screen;
+    mask-image: radial-gradient(ellipse 50% 150% at center, transparent 45%, black 100%);
+  }
+
+  > span {
+    display: inline-block;
+  }
+
+  a {
+    color: #ffd1a8;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    border-radius: 2px;
+
+    &:hover {
+      color: #fff4eb !important;
+      text-decoration-thickness: 2px;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #ffd1a8;
+      outline-offset: 4px;
+    }
+  }
+}

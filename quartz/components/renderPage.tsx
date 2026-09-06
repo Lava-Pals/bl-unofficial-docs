@@ -215,6 +215,16 @@ export function renderPage(
     <html lang={lang}>
       <Head {...componentData} />
       <body data-slug={slug}>
+        <aside class="archive-banner" aria-label="Repository archive notice">
+          <strong>This Repository is archived!</strong>{" "}
+          <span>
+            Check out{" "}
+            <a href="https://lava-pals.github.io/lava-brain" data-router-ignore>
+              Lava Brains
+            </a>
+            .
+          </span>
+        </aside>
         <div id="quartz-root" class="page">
           <Body {...componentData}>
             {LeftComponent}
